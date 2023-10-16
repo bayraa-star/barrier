@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Barrier</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <button onclick="openBarrier()">Open Barrier</button>
+
+    <script>
+        function openBarrier() {
+            fetch('/open_barrier')
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch((error) => alert('An error occurred: ' + error));
+        }
+    </script>
+</body>
+</html>
